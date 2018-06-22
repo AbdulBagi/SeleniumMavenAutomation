@@ -1,5 +1,6 @@
 package com.dice;
 
+import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DiceJobSearch {
 
 	public static void main(String[] args) {
+		
 		// set up chrome driver path
 		WebDriverManager.chromedriver().setup();
 		// invoke selenium webdriver
@@ -23,6 +25,7 @@ public class DiceJobSearch {
 		// page.
 		String url = "https://dice.com";
 		driver.get(url);
+		
 		String actualTitle = driver.getTitle();
 		String expectedTitel = "Job Search for Technology Professionals | Dice.com";
 		
@@ -57,6 +60,7 @@ public class DiceJobSearch {
 		countResult + " results in " + location);
 		}
 		driver.close();
+		System.out.println("TEST COMPLETED -- ll" + LocalDateTime.now());
 	}
 	
 
